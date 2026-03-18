@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+</head>
+<body>
+    <form method="get">
+        numero: <input type="number" name="N1" required>
+        <input type="submit" value="calcular">
+    </form>
+    <?php 
+    if (isset($_GET['N1'])) {
+        $num1 = $_GET['N1'];
+        if($num1%2 == 0) {
+            echo "O número $num1 é par.";
+        } else {
+            echo "O número $num1 é ímpar.";
+        }
+    }
+    ?>
+</body>
+</html>

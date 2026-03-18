@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8</title>
+</head>
+<body>
+    <form method="get">
+        numero: <input type="number" name="N1" required>
+        numero: <input type="number" name="N2" required>
+        numero: <input type="number" name="N3" required>
+        <input type="submit" value="calcular">
+    </form>
+    <?php
+    if (isset($_GET['N1']) && isset($_GET['N2']) && isset($_GET['N3'])) {
+        $num1 = $_GET['N1'];
+        $num2 = $_GET['N2'];
+        $num3 = $_GET['N3'];
+        $resultado = ($num1 + $num2 + $num3) / 3;
+        echo "A média é: $resultado";
+
+        echo $resultado >= 7 ? " Aprovado" : "";
+        echo $resultado < 7 && $resultado >= 5 ? " Recuperação" : "";
+        echo $resultado < 5 ? " Reprovado" : "";
+    }
+    ?>
+</body>
+</html>

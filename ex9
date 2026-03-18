@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex9</title>
+</head>
+<body>
+    <form method="get">
+        temperatura: <input type="number" name="N1" required>
+        <input type="submit" value="calcular">
+    </form>
+  <?php
+    if (isset($_GET['N1'])) {
+        $num1 = $_GET['N1'];
+        $resultado = ($num1 * 9/5) + 32;
+        echo "A temperatura em Fahrenheit é $resultado";
+    }
+    ?>
+      </body>
+</html>

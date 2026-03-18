@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+</head>
+<body>
+    <form method="get">
+        numero: <input type="number" name="N1" required>
+        numero: <input type="number" name="N2" required>
+        <input type="submit" value="calcular">
+    </form>
+    <?php
+    if (isset($_GET['N1']) && isset($_GET['N2'])) {
+        $num1 = $_GET['N1'];
+        $num2 = $_GET['N2'];
+        $resultado = ($num1 + $num2) / 2;
+        echo "A média é: $resultado";
+    }
+    ?>
+
+</body>
+</html>
